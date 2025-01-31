@@ -1,9 +1,10 @@
-# Vault Plugin Secrets Twilio
+# Vault Plugin Secrets Naughty
 
 This is a standalone backend plugin for use with [Hashicorp
 Vault](https://www.github.com/hashicorp/vault).
 
-[//]: <> (Include a general statement about this plugin)
+This plugin gives a toolbox to exercise various scenarios where malicious a Vault plugin can be used against the Vault server.
+The plugin is used to validate fixes and mitigations meant to prevent such attacks.
 
 Please note: We take Vault's security and our users' trust very seriously. If
 you believe you have found a security issue in Vault, please responsibly

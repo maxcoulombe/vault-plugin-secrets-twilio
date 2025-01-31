@@ -7,7 +7,7 @@ import (
 	"github.com/hashicorp/vault/api"
 	"github.com/hashicorp/vault/sdk/plugin"
 
-	"github.com/hashicorp/vault-plugin-scaffolding/internal/twiliosecrets"
+	"github.com/hashicorp/vault-plugin-scaffolding/internal/naughty"
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 
 	err := plugin.ServeMultiplex(&plugin.ServeOpts{
 		TLSProviderFunc:    tlsProviderFunc,
-		BackendFactoryFunc: twiliosecrets.TwilioBackendFactory,
+		BackendFactoryFunc: naughty.BackendFactory,
 	})
 	if err != nil {
 		logger := hclog.New(&hclog.LoggerOptions{})

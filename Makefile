@@ -9,7 +9,7 @@ default: dev
 
 .PHONY: dev
 dev:
-	CGO_ENABLED=0 go build -gcflags "all=-N -l" -o bin/$(PLUGIN_NAME) cmd/$(PLUGIN_NAME)/main.go
+	CGO_ENABLED=0 GOOS=linux go build -gcflags "all=-N -l" -o bin/$(PLUGIN_NAME) cmd/$(PLUGIN_NAME)/main.go
 
 # bootstrap the build by downloading additional tools
 .PHONY: bootstrap
